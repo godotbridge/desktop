@@ -1,0 +1,8 @@
+dist/
+bundled_addon/
+__pycache__/
+*.pyc
+*.build/
+*.dist/
+*.onefile-build/
+.claude/launch.json

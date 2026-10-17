@@ -42,13 +42,7 @@ jobs:
           sudo apt-get install -y libwebkit2gtk-4.1-dev patchelf
 
       - name: Copy bundled addon
-        run: python -c "
-          import shutil; from pathlib import Path;
-          src = Path('addon') / 'godot_mcp_bridge';
-          dest = Path('bundled_addon');
-          dest.exists() and shutil.rmtree(dest);
-          shutil.copytree(src, dest, ignore=shutil.ignore_patterns('*.uid', '.godot', '__pycache__'))
-          "
+        run: python -c "import shutil; from pathlib import Path; src=Path('addon')/'godot_mcp_bridge'; dest=Path('bundled_addon'); shutil.rmtree(dest, ignore_errors=True); shutil.copytree(src, dest, ignore=shutil.ignore_patterns('*.uid','.godot','__pycache__'))"
 
       - name: Build with Nuitka
         run: |

@@ -53,6 +53,7 @@ jobs:
             --output-filename=GodotBridge \
             --company-name=DigitalFusion \
             --product-name=GodotBridge \
+            --product-version=1.0.0 \
             --include-data-dir=frontend=frontend \
             --include-data-dir=bundled_addon=bundled_addon \
             --output-dir=dist \
